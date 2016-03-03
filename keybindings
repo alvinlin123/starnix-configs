@@ -1,0 +1,2 @@
+# enable ctrl-x-e to open editor to edit commandline
+autoload -U edit-command-line
