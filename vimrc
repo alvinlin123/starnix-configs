@@ -34,6 +34,7 @@ filetype plugin indent on    " required
 
 filetype plugin on
 syntax on
+set hlsearch
 set list
 set listchars=tab:»·,trail:·
 set number
