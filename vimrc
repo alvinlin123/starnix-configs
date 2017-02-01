@@ -41,8 +41,8 @@ set number
 set mouse=a
 set ttymouse=xterm
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set laststatus=2
 set backspace=indent,eol,start
 
