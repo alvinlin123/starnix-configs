@@ -33,6 +33,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 filetype plugin on
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 syntax on
 set hlsearch
 set list
