@@ -37,6 +37,7 @@ syntax on
 set hlsearch
 set list
 set listchars=tab:»·,trail:·
+set relativenumber
 set number
 set mouse=a
 set ttymouse=xterm
