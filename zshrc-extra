@@ -1,1 +1,3 @@
 bindkey -v
+
+export PATH=$HOME/apps/bin:$PATH

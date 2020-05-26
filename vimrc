@@ -55,6 +55,7 @@ set clipboard=unnamed
 
 map <C-n> :NERDTree<CR>
 map <C-s> :w<CR>
+imap jj <ESC>
 
 "Airline configs"
 let g:airline#extensions#hunks#enabled=0
