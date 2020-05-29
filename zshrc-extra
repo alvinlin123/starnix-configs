@@ -1,3 +1,4 @@
-bindkey -v
+# No need to bind, we can use oh-my-zsh vi-mode plugin.
+# bindkey -v 
 
 export PATH=$HOME/apps/bin:$PATH
