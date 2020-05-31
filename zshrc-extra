@@ -5,3 +5,7 @@ export PATH=$HOME/apps/bin:$PATH
 
 alias dk=docker
 alias kc=kubectl
+
+if [ -x $(command -v thefuck) ]; then 
+    eval $(thefuck --alias)
+fi
