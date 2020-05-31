@@ -2,3 +2,6 @@
 # bindkey -v 
 
 export PATH=$HOME/apps/bin:$PATH
+
+alias dk=docker
+alias kc=kubectl
