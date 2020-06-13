@@ -5,7 +5,7 @@ export PATH=$HOME/apps/bin:$PATH
 
 alias dk=docker
 alias kc=kubectl
-alias aws-whoami=aws sts get-caller-identity
+alias aws-whoami='aws sts get-caller-identity'
 
 if [ -x $(command -v thefuck) ]; then 
     eval $(thefuck --alias)
