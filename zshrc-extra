@@ -10,3 +10,18 @@ alias aws-whoami='aws sts get-caller-identity'
 if [ -x $(command -v thefuck) ]; then 
     eval $(thefuck --alias)
 fi
+
+aws_profile() {
+    profile_name=""
+    if [[ -n "$AWS_DEFAULT_PROFILE" ]]; then
+        profile_name="$AWS_DEFAULT_PROFILE"
+    elif [[ -n "$AWS_PROFILE" ]]; then
+        profile_name="$AWS_PROFILE"
+    fi
+    if [[ -n "$profile_name" ]]; then
+        echo -n " $profile_name "
+    fi
+}
+
+NEWLINE=$'\n'
+export PROMPT="$PROMPT %{$fg_bold[blue]%}[%D{%Y-%m-%d} %D{%H:%M:%S}] AWS:$(aws_profile)%{$reset_color%}  ${NEWLINE}▶ "
