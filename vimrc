@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pprovost/vim-ps1' 
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +59,5 @@ set clipboard=unnamed
 map <C-n> :NERDTree<CR>
 map <C-s> :w<CR>
 imap jj <ESC>
-
 "Airline configs"
 let g:airline#extensions#hunks#enabled=0
