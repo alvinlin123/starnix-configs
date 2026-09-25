@@ -3,6 +3,12 @@
 
 export PATH=$HOME/apps/bin:$PATH
 
+# Add cmux CLI tools on macOS if installed. Appended (not prepended) because
+# the bin folder ships its own `open`, which would shadow /usr/bin/open.
+if [[ "$OSTYPE" == darwin* ]] && [ -d "/Applications/cmux.app/Contents/Resources/bin" ]; then
+    export PATH="$PATH:/Applications/cmux.app/Contents/Resources/bin"
+fi
+
 alias dk=docker
 alias kc=kubectl
 alias aws-whoami='aws sts get-caller-identity'
