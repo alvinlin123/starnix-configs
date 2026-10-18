@@ -1,4 +1,46 @@
 onboarding = false
 
+# Keybindings mirrored from tmux.conf. Herdr defaults are kept alongside the
+# tmux chords so either works. Tab = tmux window, workspace = session.
+#
+# NOTE: the prefix is deliberately ctrl+w, NOT tmux's ctrl+q. Herdr is often
+# run inside a tmux session, and sharing the prefix would make tmux swallow
+# every chord before Herdr sees it. Do not change the prefix to ctrl+q.
 [keys]
 prefix = "ctrl+w"
+
+# tmux prefix+d
+detach = "prefix+d"
+
+# Splits: tmux % (side by side) and " (stacked)
+split_vertical = ["prefix+v", "prefix+%"]
+split_horizontal = ["prefix+minus", "prefix+\""]
+
+# Pane focus: tmux prefix+arrows, prefix+o (next), prefix+; (last)
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+cycle_pane_next = ["prefix+tab", "prefix+o"]
+last_pane = "prefix+;"
+
+# Resize: tmux prefix+ctrl+arrows
+resize_pane_left = "prefix+ctrl+left"
+resize_pane_down = "prefix+ctrl+down"
+resize_pane_up = "prefix+ctrl+up"
+resize_pane_right = "prefix+ctrl+right"
+
+# Copy mode: tmux prefix+[ plus the custom prefix+Escape from tmux.conf.
+# Inside copy mode v/y/Esc already behave like the tmux copy-mode-vi bindings.
+copy_mode = ["prefix+[", "prefix+esc"]
+
+# Tabs (tmux windows): tmux prefix+, rename and prefix+& close
+rename_tab = ["prefix+shift+t", "prefix+comma"]
+close_tab = ["prefix+shift+x", "prefix+ampersand"]
+
+# Workspaces (tmux sessions): tmux prefix+$ rename
+rename_workspace = ["prefix+shift+w", "prefix+$"]
+
+# Already identical to tmux defaults, left as Herdr defaults:
+#   new_tab prefix+c, next/previous_tab prefix+n/p, switch_tab prefix+1..9,
+#   zoom prefix+z, close_pane prefix+x, help prefix+?
