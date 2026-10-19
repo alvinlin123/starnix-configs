@@ -44,3 +44,8 @@ rename_workspace = ["prefix+shift+w", "prefix+$"]
 # Already identical to tmux defaults, left as Herdr defaults:
 #   new_tab prefix+c, next/previous_tab prefix+n/p, switch_tab prefix+1..9,
 #   zoom prefix+z, close_pane prefix+x, help prefix+?
+
+# No audio when agents change state in background workspaces. Toasts stay
+# at their default (off), so state changes are only visible in the sidebar.
+[ui.sound]
+enabled = false
